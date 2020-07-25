@@ -23,21 +23,26 @@ list2.count('f')
 len(list2)
 dir(list) #functions which can be operated on list of DS
 sorted(list2)
-
+#sequence , for example 
 list_fruit = ["Apple","Mango", "Banana", "Avocado"]
-first_letters = [ fruits[0] for fruits in list_fruit ]
+first_letters = [ i[0] for i in list_fruit ]
 print(first_letters)
 
-#%% - for lines, divide in parts
+#%% - for horizontal lines, divide code in parts
 #tuple - multiple type of objects like list, immutable: ( round brackets) : no changes
 tuple1 = (1, 2, 'a', 'b')
 tuple1
 type(tuple1)
+dir(tuple1)
+tuple1.count(2)
+tuple1.index(2)
+
+len(tuple1)
 
 #%%
 #Dictionary - key-value pairs : { curly bracket and colon key:value}
-dict1 = {1:'Ramesh', 2:'Suresh', 3:'Priyanka'}
-dict1
+dict1 = {1:'Ramesh', 2:'Suresh', 3:'Mukesh'}
+dict1[3]
 type(dict1)
 
 car = { 'brand':'Honda', 'model': 'Jazz', 'year' : 2017}
@@ -55,16 +60,18 @@ dir(car)
 set1 = set(['india', 'pakistan', 'england', 'australia','india'])
 set1
 type(set1)
-
+len(set1)
+dir(set)
 set2 = {'INDIA','PAKISTAN',  "INDIA"}  #better way
 set2
 set3 = {'Australia', 'South Africa', 'INDIA'}
 set3
 sorted(set3)
 set2.union(set3) #set2 | set3
+print(set2 | set3 )
 #A.intersection(B)
-set2.intersection(set3) #set2 & set
-
+set2.intersection(set3) #set2 & set3
+print(set2 & set3)
 type(set2)
 print(set2)
 #%% #Strings : 'single quote'  or "doublequote"
@@ -127,11 +134,12 @@ namez
 #%%
 #numpy - array - same data type
 import numpy
+import numpy as np #np is alias
 numpy.array([10,20])
 np2 = np.array([15,31,31])
 np2
 
-import numpy as np #np is alias
+
 np1 = np.arange(50,100)
 np1
 
@@ -175,6 +183,7 @@ dir(pd)
 df1 = pd.DataFrame({'rollno':[1,2,3,4], 'name': [ "Dhiraj", "Kounal", "Akhil", "Pooja" ], 'marks':[ 40, 50, 60.5, 70 ], 'gender':['M', 'M','M', 'F']})
 df1
 type(df1) 
+dir(df1)
 
 df1.columns  #columnanes
 df1.describe() #description of numerical values
@@ -243,3 +252,4 @@ data2a.head()
 data2c = pd.read_excel('mtcarsExcel.xlsx',header=0)
 #header=None
 data2c.head()
+type(data2a)

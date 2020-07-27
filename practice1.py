@@ -83,6 +83,9 @@ str2="Yey"
 str2.lower()
 dict?
 dir(str)
+print('Y' in str1)
+str1.index('P')
+
 #%% - Sequence
 #sequence - tuple and list are used
 list1
@@ -136,20 +139,22 @@ namez
 import numpy
 import numpy as np #np is alias
 numpy.array([10,20])
+npy1 = np.ones((3,2)) #filled with 1s
+dir(npy1)
+npy1.ndim
+npy1.shape
+npy2 = np.full((3,4),7)
+npy2
 np2 = np.array([15,31,31])
 np2
 
-
 np1 = np.arange(50,100)
 np1
-
 
 list5=[12,20,30,40,50]
 np3=np.array(list5)
 np.mean(np3)
 np3.mean()
-
-
 
 x=np.arange(start=1,stop=1000000,step=2)
 y=np.arange(0,1000000,2)
@@ -169,6 +174,7 @@ np2 = np.array([ 90, 50, 60, 70 ])
 np2
 np.sort(np2)
 dir(np)
+
 np3 = np.array([[1,4],[3,1],[5,6],[10,50]])
 np3
 np3.shape
@@ -180,7 +186,7 @@ import pandas as pd
 #https://pandas.pydata.org/pandas-docs/stable/
 pd?
 dir(pd)
-df1 = pd.DataFrame({'rollno':[1,2,3,4], 'name': [ "Dhiraj", "Kounal", "Akhil", "Pooja" ], 'marks':[ 40, 50, 60.5, 70 ], 'gender':['M', 'M','M', 'F']})
+df1 = pd.DataFrame({'rollno':[1,2,3,4], 'name': [ "Shweta", "Kounal", "Akhil", "Pooja" ], 'marks':[ 40, 50, 60.5, 70 ], 'gender':['M', 'M','M', 'F']})
 df1
 type(df1) 
 dir(df1)

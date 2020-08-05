@@ -71,7 +71,7 @@ from sklearn import tree
 from IPython.display import SVG
 #libraries & path of graphviz
 import os
-os.environ["PATH"] += os.pathsep + 'c:/Program Files (x86)/Graphviz2.38/bin/'
+os.environ["PATH"] += os.pathsep + 'c:/Program Files (x86)/Graphviz/bin/'
 #%%
 graph1 = Source(tree.export_graphviz(clf, out_file=None, class_names= ['0', '1']  , filled = True))
 display(SVG(graph1.pipe(format='svg')))
